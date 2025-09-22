@@ -1,0 +1,8 @@
+main > div.mainHeader {
+    font-family: var(--ff);
+    font-size: var(--title);
+
+    & a {
+      font-size: var(--link);
+    }
+}
