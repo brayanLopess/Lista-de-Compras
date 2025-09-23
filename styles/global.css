@@ -28,10 +28,24 @@
 
     /* Typography */
     --ff: "Inter", sans-serif;
-    --title: 1.5rem; /* Line-height: 32px; Weight: Bold;*/
-    --label: 1rem; /* Line-height: 20px; Weight: Semibold;*/
-    --paragraph: 1rem; /* Line-height: 20px; Weight: Medium;*/
-    --link: 0.875rem; /* Line-height: 16px; Weight: Medium;*/ 
+    --title: bold 1.5rem/2; /* Line-height: 32px; Weight: Bold;*/
+    --label: 600 1rem/1.25; /* Line-height: 20px; Weight: Semibold;*/
+    --paragraph: 500 1rem/1.25; /* Line-height: 20px; Weight: Medium;*/
+    --link: 500 0.875rem/1; /* Line-height: 16px; Weight: Medium;*/ 
+}
+
+body {
+    font-family: var(--ff);
+}
+
+main{
+    display: flex;
+
+    max-width: 43.75rem;
+    width: 43.75rem;
+
+    margin: 0 auto;
+    margin-top: 3.875rem;
 }
 
 header > img {
@@ -39,4 +53,13 @@ header > img {
     justify-self: center;
 
     margin-top: 1.5625rem;
+}
+
+a {
+    color: var(--color-brand);
+    text-decoration: none;
+
+    margin-bottom: 1rem;
+
+    font: var(--link) var(--ff);
 }
