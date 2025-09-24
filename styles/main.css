@@ -1,5 +1,63 @@
 main > div.mainHeader {
-    & h1 {
-      font: var(--title) var(--ff);
+  & h1 {
+    font: var(--title) var(--ff);
+  }
+}
+
+main > div.addItems {
+  /* background-color: orange; */
+
+  & input {
+    font-family: var(--ff);
+    color: var(--content-tertiary);
+    /* font-weight: 300; */
+
+    max-width: 28.1875rem;
+    width: 28.1875rem;
+
+    margin-top: 2.75rem;
+
+    /* max-height: 2.625rem; */
+    /* height: 2.625rem; */
+    
+    border: 2px solid var(--border-primary);
+    border-radius: 0.75rem;
+
+    padding-block: 0.6875rem;
+    padding-inline: 1.125rem;
+
+    background-color: var(--background-secondary);
+
+    &:hover {
+      border: 2px solid var(--border-hover);
     }
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--color-brand);
+    }
+  }
+
+  & button {
+    font: var(--label) var(--ff);
+    color: var(--always-white);
+
+    margin-inline: 1rem;
+
+    padding-block: 0.75rem;
+    padding-inline: 1.5rem;
+
+    border: 0;
+    border-radius: 0.75rem;
+
+    background-color: var(--color-brand);
+
+    &:hover {
+      cursor: pointer;
+
+      transition: all 0.5s ease-in-out;/* Configurar a saída */
+
+      background-color: var(--color-brand-hover);
+    }
+  }
 }
