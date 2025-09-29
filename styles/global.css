@@ -41,10 +41,10 @@ body {
 main{
     display: grid;
 
-    max-width: 43.75rem;
-    width: 43.75rem;
+    max-width: 41rem;
+    width: 41rem;
 
-    background-color: blue;
+    /* background-color: blue; */
 
     margin: 0 auto;
     margin-top: 3.875rem;
@@ -64,4 +64,8 @@ a {
     margin-bottom: 1rem;
 
     font: var(--link) var(--ff);
+}
+
+li {
+    list-style-type: none;
 }

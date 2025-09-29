@@ -1,32 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Compras</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <img src="./assets/logo.png" alt="Logo - Quicklist">
+      <img src="./assets/logo.png" alt="Logo - Quicklist" />
     </header>
 
     <main>
-        <div class="mainHeader">
-            <a href="#"><- Voltar</a>
-            <h1>Compras da semana</h1>
-        </div>
+      <div class="mainHeader">
+        <a href="#"><- Voltar</a>
+        <h1>Compras da semana</h1>
+      </div>
 
-        <div class="addItems">
-            <input type="text" placeholder="Adicione um novo item">
-            <button>Adicionar item</button>
-        </div>
+      <div class="addItems">
+        <input type="text" placeholder="Adicione um novo item" />
+        <button>Adicionar item</button>
+      </div>
+
+      <ul>
+        <li class="listItem">
+          <div class="textItem">
+            <input type="checkbox" name="" id="" />
+            Pão de forma
+          </div>
+
+          <button>
+            <img src="./assets/icons/trash.svg" alt="Trash Icon" />
+          </button>
+        </li>
+
+        <li class="listItem">
+          <div class="textItem">
+            <input type="checkbox" name="" id="" />
+            Café preto
+          </div>
+
+          <button>
+            <img src="./assets/icons/trash.svg" alt="Trash Icon" />
+          </button>
+        </li>
+
+        <li class="listItem">
+          <div class="textItem">
+            <input type="checkbox" name="" id="" />
+            Suco de laranja
+          </div>
+
+          <button>
+            <img src="./assets/icons/trash.svg" alt="Trash Icon" />
+          </button>
+        </li>
+
+        <li class="listItem">
+          <div class="textItem">
+            <input type="checkbox" name="" id="" />
+            Bolacha
+          </div>
+
+          <button>
+            <img src="./assets/icons/trash.svg" alt="Trash Icon" />
+          </button>
+        </li>
+      </ul>
+
+      <div class="removeListItem">
+        <img src="./assets/icons/warning.svg" alt="Alerta" />
+        <p>O item foi removido da lista</p>
+        <button><img src="./assets/icons/delete.svg" alt="" /></button>
+      </div>
     </main>
 
     <script src="./scripts.js"></script>
-</body>
+  </body>
 </html>
