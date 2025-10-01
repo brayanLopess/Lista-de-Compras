@@ -1,9 +1,10 @@
 *,
-::after,
-::before{
+*::after,
+*::before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 :root {
@@ -68,4 +69,9 @@ a {
 
 li {
     list-style-type: none;
+}
+
+.container {
+    --max-width: 87.5rem;
+    width: var(--max-width);
 }
