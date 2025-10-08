@@ -4,7 +4,7 @@ main > div.mainHeader {
   }
 }
 
-main > div.addItems {
+main > form.addItems {
   /* background-color: orange; */
   max-width: var(--max-width);
 
@@ -181,7 +181,7 @@ main > div.removeListItem {
   main {
     margin-top: 2.75rem;
     
-    & div.addItems {
+    & form.addItems {
       max-width: var(--max-width);
 
       & input {
