@@ -1,6 +1,7 @@
 // Declaring vars
 const form = document.querySelector("form")
 const item = document.querySelector("ul")
+const trashIcon = document.getElementsByClassName("trashIcon")
 
 // Event to add items to the list
 form.addEventListener("submit", (event) => {
@@ -18,6 +19,7 @@ form.addEventListener("submit", (event) => {
     // Applying classes in the items
     itemStructureLi.classList.add("listItem")
     itemStructureDiv.classList.add("textItem")
+    itemStructureImg.classList.add("trashIcon")
 
     // Searching for the image(trash) to put on the button
     itemStructureImg.src = "./assets/icons/trash.svg"
@@ -25,6 +27,7 @@ form.addEventListener("submit", (event) => {
     // Changing the input type
     itemStructureInput.type = "checkbox"
 
+    // Creating the elements
     item.append(itemStructureLi)
     itemStructureLi.append(itemStructureDiv)
     itemStructureDiv.append(itemStructureInput)
@@ -34,4 +37,7 @@ form.addEventListener("submit", (event) => {
     itemStructureButton.append(itemStructureImg)
 
     itemName.textContent = inputForm.value
+
+    // Cleaning text in the input
+    inputForm.value = ""
 })
