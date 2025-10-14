@@ -75,3 +75,7 @@ li {
     --max-width: 87.5rem;
     width: var(--max-width);
 }
+
+.displayNone {
+    display: none;
+}
