@@ -62,6 +62,11 @@ form.addEventListener("submit", (event) => {
         if(remove === undefined) {
             infoBox.classList.remove("displayNone")
             infoBox.classList.add("removeListItem")
+
+            // When the "X" button is clicked, it will delete the infoBox
+            infoBox.addEventListener("click", () => {
+                infoBox.remove()
+            })
             
             return remove
         }
@@ -80,6 +85,11 @@ button.forEach((button) => {
         if(remove === undefined) {
             infoBox.classList.remove("displayNone")
             infoBox.classList.add("removeListItem")
+
+            // When the "X" button is clicked, it wil delete the infoBox
+            infoBox.addEventListener("click", () => {
+                infoBox.remove()
+            }) 
 
             return remove
         }
