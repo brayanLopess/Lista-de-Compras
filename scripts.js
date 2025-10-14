@@ -8,6 +8,8 @@ const trashIcon = document.querySelector(".trashIcon")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
 
+    // Structure
+    const infoBox = document.querySelector("#infoBox")
     const inputForm = document.getElementById("itemAdded")
     const itemStructureLi = document.createElement("li")
     const itemStructureDiv = document.createElement("div")
@@ -15,6 +17,8 @@ form.addEventListener("submit", (event) => {
     const itemName = document.createElement("span")
     const itemStructureButton = document.createElement("button")
     const itemStructureImg = document.createElement("img")
+
+    // Regex
     const hasWhiteSpaceRegex = /^\s+$/
     const value = inputForm.value
     const valueRegex = value.search(hasWhiteSpaceRegex)
@@ -52,7 +56,15 @@ form.addEventListener("submit", (event) => {
 
     // Removing the item when the button is clicked
     itemStructureButton.addEventListener("click", () => {
-        itemStructureLi.remove(itemStructureLi)
+        const remove = itemStructureLi.remove()
+
+        // Showing the infoBox(alert) saying that the item were removed
+        if(remove === undefined) {
+            infoBox.classList.remove("displayNone")
+            infoBox.classList.add("removeListItem")
+            
+            return remove
+        }
     })
 
 })
@@ -60,7 +72,16 @@ form.addEventListener("submit", (event) => {
 // Removing the item when the button is clicked
 button.forEach((button) => {
     button.addEventListener("click", () => {
+        const infoBox = document.querySelector("#infoBox")
         const li = document.querySelector("li")
-        li.remove()
+        const remove = li.remove()
+        
+        // Showing the infoBox(alert) saying that the item were removed
+        if(remove === undefined) {
+            infoBox.classList.remove("displayNone")
+            infoBox.classList.add("removeListItem")
+
+            return remove
+        }
     })
 })
