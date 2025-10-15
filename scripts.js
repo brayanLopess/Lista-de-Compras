@@ -7,7 +7,7 @@ const trashIcon = document.querySelector(".trashIcon")
 // Event to add items to the list
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-
+    
     // Structure
     const infoBox = document.querySelector("#infoBox")
     const inputForm = document.getElementById("itemAdded")
@@ -17,6 +17,7 @@ form.addEventListener("submit", (event) => {
     const itemName = document.createElement("span")
     const itemStructureButton = document.createElement("button")
     const itemStructureImg = document.createElement("img")
+    const btnDeleteInfo = document.querySelector("#btnDeleteInfo")
 
     // Regex
     const hasWhiteSpaceRegex = /^\s+$/
@@ -63,12 +64,15 @@ form.addEventListener("submit", (event) => {
             infoBox.classList.remove("displayNone")
             infoBox.classList.add("removeListItem")
 
-            // When the "X" button is clicked, it will delete the infoBox
-            infoBox.addEventListener("click", () => {
-                infoBox.remove()
+            btnDeleteInfo.addEventListener("click", () => {
+                infoBox.classList.remove("removeListItem")
+                infoBox.classList.add("displayNone")
             })
-            
-            return remove
+
+            setTimeout(() => {
+                infoBox.classList.remove("removeListItem")
+                infoBox.classList.add("displayNone")
+            }, "10000");
         }
     })
 
@@ -78,6 +82,7 @@ form.addEventListener("submit", (event) => {
 button.forEach((button) => {
     button.addEventListener("click", () => {
         const infoBox = document.querySelector("#infoBox")
+        const btnDeleteInfo = document.querySelector("#btnDeleteInfo")
         const li = document.querySelector("li")
         const remove = li.remove()
         
@@ -86,12 +91,15 @@ button.forEach((button) => {
             infoBox.classList.remove("displayNone")
             infoBox.classList.add("removeListItem")
 
-            // When the "X" button is clicked, it wil delete the infoBox
-            infoBox.addEventListener("click", () => {
-                infoBox.remove()
-            }) 
+            btnDeleteInfo.addEventListener("click", () => {
+                infoBox.classList.remove("removeListItem")
+                infoBox.classList.add("displayNone")
+            })
 
-            return remove
+            setTimeout(() => {
+                infoBox.classList.remove("removeListItem")
+                infoBox.classList.add("displayNone")
+            }, "10000");
         }
     })
 })
