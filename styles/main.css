@@ -120,6 +120,10 @@ main > ul {
           border-color: var(--color-brand);
           background: var(--color-brand) url(../assets/icons/check.svg) no-repeat center;
         }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       & span{
