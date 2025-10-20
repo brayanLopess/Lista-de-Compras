@@ -99,7 +99,7 @@ main > ul {
       width: 36.3125rem;
       position: relative;
 
-      & .inputItem {
+      & input[type=checkbox] {
         all: unset;
         position: absolute;
         top: 0.625rem;
